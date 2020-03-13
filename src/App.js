@@ -1,19 +1,16 @@
 import React from 'react';
 import './App.css';
 import Header from './components/Header';
-import Button from './components/Button';
-import Card from './components/Card';
+// import Button from './components/Button';
+// import Card from './components/Card';
+import Quote from './components/Quote';
 
 function App() {
   return (
     <div className="layout">
       <Header />
       <main className="main">
-        <Card />
-        <div className="btn__container">
-          <Button class="btn" title="White" />
-          <Button class="btn" title="Jesse" />
-        </div>
+        <Quote />
       </main>
     </div>
   );
