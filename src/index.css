@@ -2,6 +2,14 @@
 *::after,
 *::before {
   box-sizing: border-box;
+  font-family: typewriter;
+}
+
+@font-face {
+  font-family: typewriter;
+  src: url('/fonts/moms_typewriter.woff');
+  font-weight: 100;
+  font-style: normal;
 }
 
 body {
