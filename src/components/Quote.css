@@ -1,0 +1,24 @@
+.quote {
+  min-width: 175px;
+  background-color: coral;
+  text-align: left;
+  font-size: 1.8rem;
+  transition-duration: 2s;
+  animation: move 2s ease-in;
+}
+
+.author {
+  width: 100px;
+  height: 50px;
+  background-color: coral;
+}
+
+@keyframes move {
+  0% {
+    color: #f5ddb3;
+  }
+
+  100% {
+    color: #262626;
+  }
+}
