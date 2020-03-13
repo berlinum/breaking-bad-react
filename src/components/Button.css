@@ -1,7 +1,9 @@
 .btn {
   width: 30vw;
   min-width: 100px;
-  height: 10vw;
+  height: auto;
+  margin: 0 2vw;
+  padding: 0;
   background-color: #807759;
   border-width: 0;
   outline: none;
