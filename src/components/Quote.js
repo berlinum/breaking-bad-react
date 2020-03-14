@@ -2,10 +2,13 @@ import React from 'react';
 import './Quote.css';
 import Button from './Button';
 import Card from './Card';
+import Text from './Text';
+import Author from './Author';
 
 function Quote() {
   const [quotes, setQuotes] = React.useState([]);
   const [currentQuote, setCurrentQuote] = React.useState('');
+  const [author, setAuthor] = React.useState('Walter White');
 
   React.useEffect(() => {
     async function getQuotes() {
@@ -30,19 +33,25 @@ function Quote() {
   return (
     <>
       <Card>
-        <p className="quote">{currentQuote[1]}</p>
-        <p className="author">{currentQuote[0]}</p>
+        <Text class="quote" currentQuote={currentQuote[1]} />
+        <Author class={author} author={currentQuote[0]} />
       </Card>
       <div className="btn__container">
         <Button
           class="btn"
           title="White"
-          onClick={() => handleClick('Walter White')}
+          onClick={() => {
+            handleClick('Walter White');
+            setAuthor('Walter White');
+          }}
         />
         <Button
           class="btn"
           title="Jesse"
-          onClick={() => handleClick('Jesse Pinkman')}
+          onClick={() => {
+            handleClick('Jesse Pinkman');
+            setAuthor('Jesse Pinkman');
+          }}
         />
       </div>
     </>
