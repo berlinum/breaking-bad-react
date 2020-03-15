@@ -1,7 +1,6 @@
 import React from 'react';
 import './Quote.css';
 import Button from './Button';
-import Card from './Card';
 import Text from './Text';
 import Author from './Author';
 
@@ -32,10 +31,8 @@ function Quote() {
 
   return (
     <>
-      <Card>
-        <Text class="quote" currentQuote={currentQuote[1]} />
-        <Author class={author} author={currentQuote[0]} />
-      </Card>
+      <Text class="quote__text" currentQuote={currentQuote[1]} />
+      <Author class={author} author={currentQuote[0]} />
       <div className="btn__container">
         <Button
           class="btn"
