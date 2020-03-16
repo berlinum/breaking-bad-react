@@ -1,6 +1,5 @@
 import React from 'react';
 import './Author.css';
-import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 function Author(props) {
   function getAuthorClassName(author) {
@@ -9,13 +8,7 @@ function Author(props) {
     return authorClassName;
   }
 
-  return (
-    <TransitionGroup>
-      <CSSTransition key={props.author} timeout={3500} classNames="fade">
-        <div className={getAuthorClassName(props.class)}>{props.author}</div>
-      </CSSTransition>
-    </TransitionGroup>
-  );
+  return <div className={getAuthorClassName(props.class)}>{props.author}</div>;
 }
 
 export default Author;
