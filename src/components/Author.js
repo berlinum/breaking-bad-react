@@ -1,21 +1,10 @@
-import React from 'react';
-import './Author.css';
-import { TransitionGroup, CSSTransition } from 'react-transition-group';
+import styled from '@emotion/styled';
 
-function Author(props) {
-  function getAuthorClassName(author) {
-    const authorClassName =
-      author === 'Walter White' ? 'autor_white' : 'autor_jesse';
-    return authorClassName;
-  }
-
-  return (
-    <TransitionGroup>
-      <CSSTransition key={props.author} timeout={3500} classNames="fade">
-        <div className={getAuthorClassName(props.class)}>{props.author}</div>
-      </CSSTransition>
-    </TransitionGroup>
-  );
-}
+const Author = styled.div`
+  text-align: right;
+  margin-bottom: 12vh;
+  width: 75vw;
+  font-size: clamp(1rem, 6vw, 3rem);
+`;
 
 export default Author;
