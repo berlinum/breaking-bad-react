@@ -1,9 +1,0 @@
-.quote__text {
-  display: flex;
-  align-items: center;
-  margin: 0;
-  width: 65vw;
-  height: 40vh;
-  text-align: left;
-  font-size: clamp(1rem, 7vw, 3rem);
-}

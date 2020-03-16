@@ -1,14 +1,10 @@
-import React from 'react';
-import './Author.css';
+import styled from '@emotion/styled';
 
-function Author(props) {
-  function getAuthorClassName(author) {
-    const authorClassName =
-      author === 'Walter White' ? 'autor_white' : 'autor_jesse';
-    return authorClassName;
-  }
-
-  return <div className={getAuthorClassName(props.class)}>{props.author}</div>;
-}
+const Author = styled.div`
+  text-align: right;
+  margin-bottom: 12vh;
+  width: 75vw;
+  font-size: clamp(1rem, 6vw, 3rem);
+`;
 
 export default Author;

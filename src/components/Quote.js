@@ -1,13 +1,21 @@
 import React from 'react';
-import './Quote.css';
-import Button from './Button';
-import Text from './Text';
 import Author from './Author';
+import styled from '@emotion/styled';
+import Button from './Button';
+import QuoteText from './QuoteText';
+
+const ButtonContainer = styled.div`
+  display: flex;
+  width: 65vw;
+  height: 20vw;
+  margin-bottom: 15vh;
+  justify-content: center;
+`;
 
 function Quote() {
   const [quotes, setQuotes] = React.useState([]);
   const [currentQuote, setCurrentQuote] = React.useState('');
-  const [author, setAuthor] = React.useState('Walter White');
+  // const [author, setAuthor] = React.useState('Walter White');
 
   React.useEffect(() => {
     async function getQuotes() {
@@ -31,26 +39,24 @@ function Quote() {
 
   return (
     <>
-      <Text class="quote__text" currentQuote={currentQuote[1]} />
-      <Author class={author} author={currentQuote[0]} />
-      <div className="btn__container">
+      <QuoteText>{currentQuote[1]}</QuoteText>
+      <Author>{currentQuote[0]}</Author>
+      <ButtonContainer>
         <Button
-          class="btn"
-          title="White"
           onClick={() => {
             handleClick('Walter White');
-            setAuthor('Walter White');
           }}
-        />
+        >
+          White
+        </Button>
         <Button
-          class="btn"
-          title="Jesse"
           onClick={() => {
             handleClick('Jesse Pinkman');
-            setAuthor('Jesse Pinkman');
           }}
-        />
-      </div>
+        >
+          Jesse
+        </Button>
+      </ButtonContainer>
     </>
   );
 }
