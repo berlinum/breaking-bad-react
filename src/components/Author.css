@@ -1,11 +1,16 @@
 .autor_white {
-  padding: 10px 0;
-  text-align: left;
-  font-size: 30px;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 5vh;
+  width: 75vw;
+  height: 12vh;
+  font-size: clamp(1rem, 6vw, 3rem);
 }
 
 .autor_jesse {
-  padding: 10px 0 90px 0;
+  width: 75vw;
+  height: 12vh;
+  margin-bottom: 5vh;
   text-align: right;
-  font-size: 30px;
+  font-size: clamp(1rem, 6vw, 3rem);
 }

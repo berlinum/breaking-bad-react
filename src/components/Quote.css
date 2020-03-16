@@ -1,17 +1,21 @@
-.quote {
-  min-width: 175px;
-  text-align: left;
-  font-size: 1.8rem;
-  transition-duration: 2s;
-  animation: move 2s ease-in;
+.fade-enter {
+  opacity: 0;
 }
 
-@keyframes move {
-  0% {
-    color: #f5ddb3;
-  }
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: all 2000ms ease-out 1000ms;
+}
 
-  100% {
-    color: #262626;
-  }
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+  opacity: 0;
+  transition: opacity 1000ms linear;
+}
+
+.fade-exit-done {
+  opacity: 0;
 }
